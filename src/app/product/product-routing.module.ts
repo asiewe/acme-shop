@@ -6,11 +6,20 @@ import { ProductComponent } from './product.component';
 
 const routes: Routes = [
   {
-    path: '', 
+    path: '',
     component: ProductComponent,
     children: [
       { path: 'details', component: ProductDetailsComponent },
-      { path: 'edit', component: ProductEditComponent }
+      {
+        path: 'edit', component: ProductEditComponent, canDeactivate: [(component: ProductEditComponent) => {
+          if(component.productForm.dirty) {
+            const productName = component.productForm.get('title')?.value || 'New Product';
+            return confirm(`Navigate away and lose all changes to ${productName}?`);
+          }
+          return true
+        }
+      ]
+      }
     ]
   },
 ];

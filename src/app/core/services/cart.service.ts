@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, combineLatest, forkJoin, from, map, mergeMap, Observable, of, switchMap, tap, toArray, pipe, filter } from 'rxjs';
+import { forkJoin, map, of, switchMap, pipe } from 'rxjs';
 import { Cart } from 'src/app/shared/models/Cart';
 import { Product } from 'src/app/shared/models/Product';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './auth.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable(
+  {providedIn: 'root'}
+)
 export class CartService {
 
   constructor(private http: HttpClient, private authService: AuthService) { }

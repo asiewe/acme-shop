@@ -29,3 +29,7 @@ input[text] {
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.full-width {
+    width: 100%;
+}

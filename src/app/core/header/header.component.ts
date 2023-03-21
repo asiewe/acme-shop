@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Optional } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable, map, tap, combineLatest} from 'rxjs';
 import { LoginComponent } from '../login/login.component';

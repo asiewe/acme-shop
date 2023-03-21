@@ -52,7 +52,11 @@ export class ProductService {
   }
 
 
-  getProduct(id: number) {
-    return this.http.get<Product>(`${environment.apiBasePath}/products/${id}`)
+  getProduct(productId: number) {
+    return this.http.get<Product>(`${environment.apiBasePath}/products/${productId}`)
+  }
+
+  updateProduct(productId: number, product: Partial<Product>) {
+    return this.http.patch(`${environment.apiBasePath}/products/${productId}`, product)
   }
 }

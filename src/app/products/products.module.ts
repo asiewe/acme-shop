@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../shared/shared.module';
 import { ProductsRoutingModule } from './products-routing.module';
 
-
 @NgModule({
   declarations: [
     ProductsComponent
@@ -15,7 +14,6 @@ import { ProductsRoutingModule } from './products-routing.module';
     HttpClientModule,
     SharedModule,
     ProductsRoutingModule,
-    SharedModule,
   ]
 })
 export class ProductsModule { }

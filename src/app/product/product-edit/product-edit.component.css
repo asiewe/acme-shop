@@ -1,0 +1,13 @@
+mat-form-field{
+    width: 100%;
+}
+
+.action-btn-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.action-btn-wrapper > button {
+    margin-left: 10px;
+}

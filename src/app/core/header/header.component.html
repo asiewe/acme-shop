@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="app-toolbar">
+    <span><a class="logo" routerLink="/">Acme</a></span>
+    <div class="toolbar-btn-wrapper" *ngIf="vm$ | async as vm">
+        <button *ngIf="!vm.currentUser" mat-icon-button (click)="login()">
+            <mat-icon matBadgeColor="warn">login</mat-icon>
+        </button>
+        <ng-container *ngIf="vm.currentUser as currentUser">
+            <button mat-icon-button>
+                <mat-icon [matBadge]="vm.numberOfItems" matBadgeColor="warn">shopping_cart</mat-icon>
+            </button>
+            <div  class="user-picture">
+                <a routerLink="/me"><img [src]="currentUser.image"></a>
+            </div>
+        </ng-container>
+    </div>
+</mat-toolbar>

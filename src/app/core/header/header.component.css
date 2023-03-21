@@ -1,0 +1,19 @@
+.app-toolbar{
+    display: flex;
+}
+
+.toolbar-btn-wrapper{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user-picture{
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.logo{
+    color: white;
+    text-decoration: none;
+}

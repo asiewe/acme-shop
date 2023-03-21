@@ -1,0 +1,26 @@
+<div class="toolbar">
+  <mat-form-field>
+    <input placeholder="Search" #searchInput matInput (keydown.enter)="onSearch(searchInput.value)">
+  </mat-form-field>
+  <mat-select class="category-filter" placeholder="Filter by category"
+    (selectionChange)="onSelectCategory($event.value)">
+    <mat-option *ngFor="let category of productCategories$ | async" [value]="category">
+      {{category}}
+    </mat-option>
+  </mat-select>
+  <button mat-button (click)="onReload()">
+    <mat-icon>refresh</mat-icon> Refresh
+  </button>
+</div>
+<div class="product-list">
+  <div class="product-list-item" *ngFor="let product of products$ | async">
+    <img [src]="product.thumbnail" [alt]="product.title" (click)="onSelectProduct(product)">
+    <div class="product-title">{{product.title}}</div>
+    <div class="product-list-item-btn-wrapper">
+      <button mat-flat-button color="primary" (click)="onAddToCart(product)">
+        <mat-icon>add</mat-icon>
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>

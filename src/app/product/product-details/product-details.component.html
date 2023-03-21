@@ -1,0 +1,27 @@
+<div class="product-details" *ngIf="product$ | async as product">
+    <h2>{{product.title}}</h2>
+    <div class="toolbar">
+        <button color="primary" mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="edit(product)">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button color="accent" mat-icon-button >
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
+    <mat-grid-list cols="8" gutterSize="20">
+        <mat-grid-tile *ngFor="let image of product.images">
+            <img class="product-img" [src]="image">
+        </mat-grid-tile>
+    </mat-grid-list>
+    <div class="product-metadata">
+        <span>Category: <mat-chip>{{product.category}}</mat-chip></span>
+        <span>Price: <mat-chip>{{product.price | currency:'EUR'}}</mat-chip></span>
+        <span>Rating: <mat-chip>{{product.rating}}</mat-chip></span>
+        <span>Brand: <mat-chip>{{product.brand}}</mat-chip></span>
+        <span>Stock: <mat-chip>{{product.stock}}</mat-chip></span>
+        <span>DiscountPercentage: <mat-chip>{{product.discountPercentage | percent}}</mat-chip></span>
+    </div>
+    <div class="product-description">
+        {{product.title}}
+    </div>
+</div>

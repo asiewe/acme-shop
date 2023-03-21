@@ -1,0 +1,41 @@
+.product-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.product-list-item {
+    margin:2em;
+    width: 150px;
+}
+
+.product-list-item:hover {
+    cursor: pointer;
+}
+
+.product-list-item img {
+    display: block;
+    width:150px;
+    height:200px;
+    object-fit: contain;
+}
+
+.toolbar{
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+    align-items: baseline;
+}
+
+.category-filter{
+    width: 200px;
+}
+
+.toolbar > * {
+    margin: 0 10px;
+}
+
+.product-list-item-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}

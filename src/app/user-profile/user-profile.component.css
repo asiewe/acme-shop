@@ -1,0 +1,13 @@
+.user-profile-nav{
+  width: 200px;
+  height: 50%;
+  background-color: #eee;
+}
+
+.user-profile {
+  display: flex;
+}
+
+.user-profile-content {
+  margin-left: 2em;
+}

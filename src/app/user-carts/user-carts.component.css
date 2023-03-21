@@ -1,0 +1,15 @@
+.total-price {
+    font-size: 2em;
+    display: flex;
+    justify-content: flex-end
+}
+
+.mat-mdc-list-item{
+    height: 100px !important;
+}
+
+.matListItemMeta-wrapper{
+    font-weight: 800;
+    display: flex !important;
+    flex-direction: column;
+}

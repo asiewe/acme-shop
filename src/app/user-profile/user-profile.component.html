@@ -1,0 +1,13 @@
+<div class="user-profile">
+    <section class="user-profile-nav">
+        <mat-nav-list>
+            <mat-list-item *ngFor="let navItem of nav" (click)="onNavItemClick(navItem)">
+                <mat-icon matListItemIcon>{{navItem.icon}}</mat-icon>
+                {{ navItem.title }}
+            </mat-list-item>
+        </mat-nav-list>
+    </section>
+    <section class="user-profile-content">
+        <router-outlet></router-outlet>
+    </section>
+</div>

@@ -1,0 +1,34 @@
+/**
+* reference: https://material.angular.io/guide/theming#sass
+*/
+
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+
+// Define color palette
+
+$primary: mat.define-palette(mat.$cyan-palette, 800);
+$accent: mat.define-palette(mat.$orange-palette, 500);
+// The "warn" palette is optional and defaults to red if not specified.
+$warn: mat.define-palette(mat.$red-palette);
+
+
+// Define the theme
+$theme: mat.define-dark-theme((
+ color: (
+   primary: $primary,
+   accent: $accent,
+   warn: $warn,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+
+// Applying a theme to components
+.dark-theme {
+  @include mat.all-component-colors($theme);
+}
+

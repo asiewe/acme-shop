@@ -5,7 +5,7 @@ import { EventBusService, Events } from '../services/event-bus.service';
 @Component({
   selector: 'app-overlay',
   templateUrl: './overlay.component.html',
-  styleUrls: ['./overlay.component.css']
+  styleUrls: ['./overlay.component.scss']
 })
 export class OverlayComponent implements OnInit {
 

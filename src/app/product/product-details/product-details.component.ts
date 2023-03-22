@@ -1,21 +1,19 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable, Subscription, switchMap } from 'rxjs';
+import { Observable, switchMap } from 'rxjs';
 import { ProductService } from 'src/app/core/services/product.service';
 import { Product } from 'src/app/shared/models/Product';
 
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.css']
+  styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
 
   product$!: Observable<Product>;
-  routeSub!: Subscription
 
-  constructor(private route: ActivatedRoute, private productService: ProductService,private router: Router, private formBuilder: FormBuilder ) {
+  constructor(private route: ActivatedRoute, private productService: ProductService,private router: Router) {
   }
 
   ngOnInit(): void {

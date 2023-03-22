@@ -1,4 +1,4 @@
-<main class="root">
+<main class="root" [ngClass]="{'dark-theme': isDarkMode$ | async, 'mat-app-background': true}">
   <app-header></app-header>
   <section class="main-content">
     <router-outlet></router-outlet>

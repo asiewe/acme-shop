@@ -4,7 +4,7 @@ import { CartService } from '../core/services/cart.service';
 @Component({
   selector: 'app-user-carts',
   templateUrl: './user-carts.component.html',
-  styleUrls: ['./user-carts.component.css']
+  styleUrls: ['./user-carts.component.scss']
 })
 export class UserCartsComponent {
 

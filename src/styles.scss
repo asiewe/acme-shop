@@ -1,0 +1,24 @@
+@import 'style/theme-light.scss';
+@import 'style/theme-dark.scss';
+
+html, body{
+    min-height: 100vh;
+}
+
+body,
+input[text] {
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.acmeStore {
+    margin: 0px;
+}

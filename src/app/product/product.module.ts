@@ -7,7 +7,6 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
-import { CoreModule } from '../core/core.module';
 
 @NgModule({
   declarations: [

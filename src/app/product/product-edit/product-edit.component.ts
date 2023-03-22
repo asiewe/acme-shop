@@ -9,7 +9,7 @@ import { Product } from 'src/app/shared/models/Product';
 @Component({
   selector: 'app-product-edit',
   templateUrl: './product-edit.component.html',
-  styleUrls: ['./product-edit.component.css']
+  styleUrls: ['./product-edit.component.scss']
 })
 export class ProductEditComponent implements OnInit, OnDestroy  {
   productForm!: FormGroup
